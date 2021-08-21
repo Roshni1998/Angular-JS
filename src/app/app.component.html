@@ -1,8 +1,13 @@
 <div>
-  <h1>{{this.title}}</h1>
-  <img [src]="imgUrl"
-       alt="The Bridgelabz logo: a Bridge to Employment through a Lab Works."
+  <h1>Hello {{this.userName}} from Bridgelabz </h1>
+  <img [src]="imgUrl" (click)="onClick($event)"
+       alt="The Bridgelabz logo: a Bridge to 
+       Employment through a Lab Works."
   />
+</div>
+<div>
+  <input (input)="onInput($event)" [(ngModule)]="userName"/> <br/><br/>
+  <span class = error-output >this.nameError</span>
 </div>
 
 <router-outlet></router-outlet>
